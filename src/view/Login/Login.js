@@ -150,7 +150,7 @@ const Login = () => {
 
             
           </form>
-          <Link to="/register"><p className='fs-4 text-decoration-none  text-center mt-3 text-light'>Register</p></Link>
+          {/* <Link to="/register"><p className='fs-4 text-decoration-none  text-center mt-3 text-light'>Register</p></Link> */}
         </div>
 
         {/* <div className='login-content col-md-6'>

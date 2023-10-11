@@ -1,11 +1,11 @@
 import './Register.css';
-import registerimg from './../../view/Login/bg-login.jpg'
+// import registerimg from './../../view/Login/bg-login.jpg'
 import { useState } from 'react';
 import showToast from 'crunchy-toast';
 import Navbar from './../../component/Navbar/Navbar';
 import Footer from './../../component/Footer/Footer';
-import Logo from "./logo.png"
-import { Link } from 'react-router-dom'
+// import Logo from "./logo.png"
+// import { Link } from 'react-router-dom'
 
 const Register = () => {
     const [email, setEmail] = useState('');
@@ -163,7 +163,7 @@ const Register = () => {
 
                                     }} /><br />
 
-                                {/* <label className='mt-3 fs-4'>Age : </label>
+                                <label className='mt-3 fs-4'>Age : </label>
 
                                 <input
                                     type='mobile'
@@ -175,7 +175,7 @@ const Register = () => {
                                         setAge(e.target.value);
 
                                     }} />
-
+{/* 
                                 <input
                                     type='mobile'
                                     className='text px-4'
