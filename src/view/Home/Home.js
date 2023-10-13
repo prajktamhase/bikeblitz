@@ -42,7 +42,7 @@ const Home = () => {
   const [dropdate, setdropDate] = useState("");
   const [pickuptime, setpickupTime] = useState("");
   const [droptime, setdropTime] = useState("");
- 
+
 
   // const saveFormData = () => {
   //    // Parse existing data from local storage or create an empty array
@@ -116,118 +116,118 @@ const Home = () => {
                 </div>
               </div>
 
-                     <p>Book At</p><br/>
-                     <select onChange={(e)=>{
-                        setBook(e.target.value)
+              <p>Book At</p><br />
+              <select onChange={(e) => {
+                setBook(e.target.value)
 
-                     }}>
-                        <option>Daily</option>
-                        <option>Weekly</option>
-                        <option>Monthly</option>
-                     </select>
+              }}>
+                <option>Daily</option>
+                <option>Weekly</option>
+                <option>Monthly</option>
+              </select>
 
-                    
 
-                        <p>pick up date</p>
-                     <input type="time" onChange={(e)=>{
-                        setpickupTime(e.target.value)
-                     }} />
-                     <input type="date" onChange={(e)=>{
-                        setpickupDate(e.target.value)
-                     }}  className='ms-3'/>
 
-                     <p >drop  up date</p>
-                     <input type="time" onChange={(e)=>{
-                        setdropTime(e.target.value)
-                     }} />
-                     <input type="date"  onChange={(e)=>{
-                        setdropDate(e.target.value)
-                     }} className='ms-3'/>
-                  </div>
-                  <Link to="/bookbike">
-                  <button onClick={saveFormData} >find bike</button>
-                 </Link>
+              <p>pick up date</p>
+              <input type="time" onChange={(e) => {
+                setpickupTime(e.target.value)
+              }} />
+              <input type="date" onChange={(e) => {
+                setpickupDate(e.target.value)
+              }} className='ms-3' />
 
-                <input
-                  type="time"
-                  onChange={(e) => {
-                    setdropTime(e.target.value);
-                  }}
-                  className="select-bar"
-                />
-
-                <input
-                  type="date"
-                  onChange={(e) => {
-                    setdropDate(e.target.value);
-                  }}
-                  className="ms-3 select-bar"
-                />
-                <div></div>
-              </div>
-
+              <p >drop  up date</p>
+              <input type="time" onChange={(e) => {
+                setdropTime(e.target.value)
+              }} />
+              <input type="date" onChange={(e) => {
+                setdropDate(e.target.value)
+              }} className='ms-3' />
             </div>
             <Link to="/bookbike">
-              <button onClick={saveFormData} className="find-button px-5 d-block bold text-decoration-none mx-auto">
-                Find Bike Here
-              </button>
+              <button onClick={saveFormData} >find bike</button>
             </Link>
-          </form>
-        </div>
-      </div>
 
-      <div className="d-flex justify-content-evenly flex-wrap ms-5  mt-5">
-        <div>
-          {" "}
-          <Safety
-            safetyheading="No Riding Limits"
-            saftdec="Odometer Won't Scare You Anymore."
-            safetylogo={noriding}
-          />
-        </div>
-        <div>
-          {" "}
-          <Safety
-            safetyheading="Freebies"
-            saftdec="Helmets Always, Sometimes More."
-            safetylogo={helmet}
-          />
-        </div>
-        <div>
-          {" "}
-          <Safety
-            safetyheading="Secure Payments"
-            saftdec="Our Payment Partners are Industry Leaders."
-            safetylogo={payment}
-          />
-        </div>
-        <div>
-          {" "}
-          <Safety
-            safetyheading="No Bullshit"
-            saftdec="A Day Rent is simply for 24 hrs, We mean it."
-            safetylogo={hour24}
-          />
-        </div>
-        <div>
-          {" "}
-          <Safety
-            safetyheading="Verified Dealers"
-            saftdec="Every Single Dealer is Committed to Quality Service."
-            safetylogo={person}
-          />
-        </div>
-        <div>
-          {" "}
-          <Safety
-            safetyheading="100% Moneyback"
-            saftdec="Not Happy With Service, Take Your Money Back."
-            safetylogo={cash}
-          />
-        </div>
-      </div>
+            <input
+              type="time"
+              onChange={(e) => {
+                setdropTime(e.target.value);
+              }}
+              className="select-bar"
+            />
 
-      {/* how to use */}
+            <input
+              type="date"
+              onChange={(e) => {
+                setdropDate(e.target.value);
+              }}
+              className="ms-3 select-bar"
+            />
+            <div></div>
+        </div>
+
+      </div>
+      <Link to="/bookbike">
+        <button onClick={saveFormData} className="find-button px-5 d-block bold text-decoration-none mx-auto">
+          Find Bike Here
+        </button>
+      </Link>
+    </form>
+        </div >
+      </div >
+
+  <div className="d-flex justify-content-evenly flex-wrap ms-5  mt-5">
+    <div>
+      {" "}
+      <Safety
+        safetyheading="No Riding Limits"
+        saftdec="Odometer Won't Scare You Anymore."
+        safetylogo={noriding}
+      />
+    </div>
+    <div>
+      {" "}
+      <Safety
+        safetyheading="Freebies"
+        saftdec="Helmets Always, Sometimes More."
+        safetylogo={helmet}
+      />
+    </div>
+    <div>
+      {" "}
+      <Safety
+        safetyheading="Secure Payments"
+        saftdec="Our Payment Partners are Industry Leaders."
+        safetylogo={payment}
+      />
+    </div>
+    <div>
+      {" "}
+      <Safety
+        safetyheading="No Bullshit"
+        saftdec="A Day Rent is simply for 24 hrs, We mean it."
+        safetylogo={hour24}
+      />
+    </div>
+    <div>
+      {" "}
+      <Safety
+        safetyheading="Verified Dealers"
+        saftdec="Every Single Dealer is Committed to Quality Service."
+        safetylogo={person}
+      />
+    </div>
+    <div>
+      {" "}
+      <Safety
+        safetyheading="100% Moneyback"
+        saftdec="Not Happy With Service, Take Your Money Back."
+        safetylogo={cash}
+      />
+    </div>
+  </div>
+
+{/* how to use */ }
 
       <h1 className="text-center fw-bold useheading ">How To Use {city}</h1>
 
@@ -314,11 +314,11 @@ const Home = () => {
         </div>
       </div>
 
-<Model/>
+            <      Model/>
       <div>
         <Footer />
       </div>
-    </div>
+    </div >
   );
 };
 export default Home;
