@@ -30,11 +30,9 @@ const Footer = () => {
                         <h2 className='fs-2  mb-4 get-cursor'>
                             Get In Touch
                         </h2>
-                        <p>15, Sri Kumaran Street,<br />
-                            Peelamedu, Ram Lakshman Nagar,<br />
-                            Coimbatore, Tamil Nadu 641004</p>
-                        <Link to="mailto=onroadzrentals@gmail.com" className='footer-link '>onroadzrentals@gmail.com</Link><br />
-                        <Link to="mobile=099760 38888" className='footer-link m-3'>099760 38888</Link><br />
+                        <p>xyz-Pune road 123</p>
+                        <Link to="mailto=xyz123@gmail.com" className='footer-link '>xyz123@gmail.com</Link><br />
+                        <Link to="mobile=099760 38888" className='footer-link m-3'>0997546458</Link><br />
                         <img src={facebook} className='m-1 p-1 mt-2' />
                         <img src={insta} className='m-1 p-3 mt-2' />
                         <img src={twitter} className='m-2 p-1 mt-2' />

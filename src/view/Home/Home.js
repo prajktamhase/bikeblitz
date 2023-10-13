@@ -32,6 +32,7 @@ import use3 from "./assets/pick-up.png";
 import use4 from "./assets/ride-your-bike.png";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import About from "./../../component/About/About"
 
 import Model from './../../component/Model/Model'
 
@@ -42,6 +43,7 @@ const Home = () => {
   const [dropdate, setdropDate] = useState("");
   const [pickuptime, setpickupTime] = useState("");
   const [droptime, setdropTime] = useState("");
+
 
   // const saveFormData = () => {
   //    // Parse existing data from local storage or create an empty array
@@ -115,37 +117,37 @@ const Home = () => {
                 </div>
               </div>
 
-                     <p>Book At</p><br/>
-                     <select onChange={(e)=>{
-                        setBook(e.target.value)
+              <p >Book At</p><br />
+              <select onChange={(e) => {
+                setBook(e.target.value)
 
-                     }}>
-                        <option>Daily</option>
-                        <option>Weekly</option>
-                        <option>Monthly</option>
-                     </select>
+              }}>
+                <option className="px-5">Daily</option>
+                <option className="px-5">Weekly</option>
+                <option className="px-5">Monthly</option>
+              </select>
 
-                    
 
-                        <p>pick up date</p>
-                     <input type="time" onChange={(e)=>{
-                        setpickupTime(e.target.value)
-                     }} />
-                     <input type="date" onChange={(e)=>{
-                        setpickupDate(e.target.value)
-                     }}  className='ms-3'/>
 
-                     <p >drop  up date</p>
-                     <input type="time" onChange={(e)=>{
-                        setdropTime(e.target.value)
-                     }} />
-                     <input type="date"  onChange={(e)=>{
-                        setdropDate(e.target.value)
-                     }} className='ms-3'/>
-                  </div>
-                  <Link to="/bookbike">
-                  <button onClick={saveFormData} >find bike</button>
-                 </Link>
+              <p>pick up date</p>
+              <input type="time" onChange={(e) => {
+                setpickupTime(e.target.value)
+              }} />
+              <input type="date" onChange={(e) => {
+                setpickupDate(e.target.value)
+              }} className='ms-3' />
+
+              <p >drop  up date</p>
+              <input type="time" onChange={(e) => {
+                setdropTime(e.target.value)
+              }} />
+              <input type="date" onChange={(e) => {
+                setdropDate(e.target.value)
+              }} className='ms-3' />
+            </div>
+            <Link to="/bookbike">
+              <button onClick={saveFormData} >find bike</button>
+            </Link>
 
             <input
               type="time"
@@ -162,162 +164,164 @@ const Home = () => {
               }}
               className="ms-3 select-bar"
             />
-            <div></div>
-        </div>
 
-      </div>
-      <Link to="/bookbike">
-        <button onClick={saveFormData} className="find-button px-5 d-block bold text-decoration-none mx-auto">
-          Find Bike Here
-        </button>
-      </Link>
-    </form>
+
+            <Link to="/bookbike">
+              <button onClick={saveFormData} className="find-button px-5 d-block bold text-decoration-none mx-auto">
+                Find Bike Here
+              </button>
+            </Link>
+          </form>
         </div >
       </div >
 
-  <div className="d-flex justify-content-evenly flex-wrap ms-5  mt-5">
-    <div>
-      {" "}
-      <Safety
-        safetyheading="No Riding Limits"
-        saftdec="Odometer Won't Scare You Anymore."
-        safetylogo={noriding}
-      />
-    </div>
-    <div>
-      {" "}
-      <Safety
-        safetyheading="Freebies"
-        saftdec="Helmets Always, Sometimes More."
-        safetylogo={helmet}
-      />
-    </div>
-    <div>
-      {" "}
-      <Safety
-        safetyheading="Secure Payments"
-        saftdec="Our Payment Partners are Industry Leaders."
-        safetylogo={payment}
-      />
-    </div>
-    <div>
-      {" "}
-      <Safety
-        safetyheading="No Bullshit"
-        saftdec="A Day Rent is simply for 24 hrs, We mean it."
-        safetylogo={hour24}
-      />
-    </div>
-    <div>
-      {" "}
-      <Safety
-        safetyheading="Verified Dealers"
-        saftdec="Every Single Dealer is Committed to Quality Service."
-        safetylogo={person}
-      />
-    </div>
-    <div>
-      {" "}
-      <Safety
-        safetyheading="100% Moneyback"
-        saftdec="Not Happy With Service, Take Your Money Back."
-        safetylogo={cash}
-      />
-    </div>
-  </div>
+      <div className="d-flex justify-content-evenly flex-wrap ms-5  mt-5">
+        <div>
+          {" "}
+          <Safety
+            safetyheading="No Riding Limits"
+            saftdec="Odometer Won't Scare You Anymore."
+            safetylogo={noriding}
+          />
+        </div>
+        <div>
+          {" "}
+          <Safety
+            safetyheading="Freebies"
+            saftdec="Helmets Always, Sometimes More."
+            safetylogo={helmet}
+          />
+        </div>
+        <div>
+          {" "}
+          <Safety
+            safetyheading="Secure Payments"
+            saftdec="Our Payment Partners are Industry Leaders."
+            safetylogo={payment}
+          />
+        </div>
+        <div>
+          {" "}
+          <Safety
+            safetyheading="No Bullshit"
+            saftdec="A Day Rent is simply for 24 hrs, We mean it."
+            safetylogo={hour24}
+          />
+        </div>
+        <div>
+          {" "}
+          <Safety
+            safetyheading="Verified Dealers"
+            saftdec="Every Single Dealer is Committed to Quality Service."
+            safetylogo={person}
+          />
+        </div>
+        <div>
+          {" "}
+          <Safety
+            safetyheading="100% Moneyback"
+            saftdec="Not Happy With Service, Take Your Money Back."
+            safetylogo={cash}
+          />
+        </div>
+      </div>
 
-{/* how to use */ }
 
-      <h1 className="text-center fw-bold useheading ">How To Use {city}</h1>
 
-      <div className="how-to-use">
+       <h1 className="text-center fw-bold useheading ">How To Use {city}</h1>
+
+     <div className="how-to-use">
         <div className="d-flex justify-content-evenly flex-wrap mt-5 ">
-          <div className="ms-3">
-            <UseTo
-              useimg={use1}
+           <div className="ms-3">
+             <UseTo
+               useimg={use1}
               useheading="Select Rental Product"
               usedes="You can search & select product from our wide range."
-            />
+             />
+           </div>
+
+           <div className="ms-3">
+             <UseTo
+               useimg={use2}
+               useheading="Add to cart"
+               usedes="Easily add multiple product in your cart or direct book from Book Now button"
+             />
+           </div>
+
+           <div className="ms-3">
+             <UseTo
+               useimg={use3}
+               useheading="Select Rental Product"
+               usedes="You can search & select product from our wide range."
+             />
           </div>
 
-          <div className="ms-3">
-            <UseTo
-              useimg={use2}
-              useheading="Add to cart"
-              usedes="Easily add multiple product in your cart or direct book from Book Now button"
-            />
-          </div>
-
-          <div className="ms-3">
-            <UseTo
-              useimg={use3}
+           <div className="ms-3">
+             <UseTo
+               useimg={use4}
               useheading="Select Rental Product"
-              usedes="You can search & select product from our wide range."
-            />
-          </div>
+               usedes="You can search & select product from our wide range."
+             />
+           </div>
+         </div>
+       </div>
 
-          <div className="ms-3">
-            <UseTo
-              useimg={use4}
-              useheading="Select Rental Product"
-              usedes="You can search & select product from our wide range."
-            />
-          </div>
-        </div>
-      </div>
+       <h1 className="text-center fs-1  m-5 cityheading">
+         Bike Rental Services in Top Cities
+       </h1>
 
-      <h1 className="text-center fs-1  m-5 cityheading">
-        Bike Rental Services in Top Cities
-      </h1>
-
-      <div className=" container city-main-container my-3">
-        <div className="d-flex justify-content-evenly flex-wrap m-3">
+       <div className=" container city-main-container my-3">
+         <div className="d-flex justify-content-evenly flex-wrap m-3">
           <div>
-            <City cityimg={city1} cityname="Ahmedabad" />
-          </div>
-          <div>
-            <City cityimg={city2} cityname="Bangalore" />
-          </div>
-          <div>
-            <City cityimg={city3} cityname="chandigarh" />
-          </div>
-          <div>
-            <City cityimg={city4} cityname="Chennai" />
-          </div>
-          <div>
-            <City cityimg={city5} cityname="coimbatore" />
-          </div>
-          <div>
-            <City cityimg={city6} cityname="goa" />
-          </div>
-        </div>
-        <div className="d-flex justify-content-evenly flex-wrap m-3 mt-5">
-          <div>
+             <City cityimg={city1} cityname="Ahmedabad" />
+           </div>
+           <div>
+             <City cityimg={city2} cityname="Bangalore" />
+           </div>
+           <div>
+             <City cityimg={city3} cityname="chandigarh" />
+           </div>
+           <div>
+             <City cityimg={city4} cityname="Chennai" />
+           </div>
+           <div>
+             <City cityimg={city5} cityname="coimbatore" />
+           </div>
+           <div>
+             <City cityimg={city6} cityname="goa" />
+           </div>
+         </div>
+         <div className="d-flex justify-content-evenly flex-wrap m-3 mt-5">
+           <div>
             <City cityimg={city7} cityname="guwahati" />
+           </div>
+           <div>
+             <City cityimg={city8} cityname="indore" />
           </div>
-          <div>
-            <City cityimg={city8} cityname="indore" />
-          </div>
-          <div>
+         <div>
             <City cityimg={city9} cityname="kolkata" />
+           </div>
+           <div>
+              <City cityimg={city10} cityname="jaipur" />
           </div>
-          <div>
-            <City cityimg={city10} cityname="jaipur" />
-          </div>
-          <div>
-            <City cityimg={city11} cityname="pune" />
-          </div>
-          <div>
-            <City cityimg={city12} cityname="mumbai" />
-          </div>
-        </div>
-      </div>
+           <div>
+             <City cityimg={city11} cityname="pune" />
+           </div>
+           <div>
+             <City cityimg={city12} cityname="mumbai" />
+           </div>
+         </div>
+       </div>
 
-            <      Model/>
+             <      Model />
       <div>
-        <Footer />
-      </div>
-    </div >
-  );
-};
-export default Home;
+        <About/>
+         <Footer />
+       </div> 
+       </div>
+
+
+
+  )
+}
+export default Home
