@@ -43,7 +43,6 @@ const Home = () => {
   const [pickuptime, setpickupTime] = useState("");
   const [droptime, setdropTime] = useState("");
 
-
   // const saveFormData = () => {
   //    // Parse existing data from local storage or create an empty array
   //    const formdatasave = JSON.parse(localStorage.getItem('formUser')) || [];
@@ -116,37 +115,37 @@ const Home = () => {
                 </div>
               </div>
 
-              <p>Book At</p><br />
-              <select onChange={(e) => {
-                setBook(e.target.value)
+                     <p>Book At</p><br/>
+                     <select onChange={(e)=>{
+                        setBook(e.target.value)
 
-              }}>
-                <option>Daily</option>
-                <option>Weekly</option>
-                <option>Monthly</option>
-              </select>
+                     }}>
+                        <option>Daily</option>
+                        <option>Weekly</option>
+                        <option>Monthly</option>
+                     </select>
 
+                    
 
+                        <p>pick up date</p>
+                     <input type="time" onChange={(e)=>{
+                        setpickupTime(e.target.value)
+                     }} />
+                     <input type="date" onChange={(e)=>{
+                        setpickupDate(e.target.value)
+                     }}  className='ms-3'/>
 
-              <p>pick up date</p>
-              <input type="time" onChange={(e) => {
-                setpickupTime(e.target.value)
-              }} />
-              <input type="date" onChange={(e) => {
-                setpickupDate(e.target.value)
-              }} className='ms-3' />
-
-              <p >drop  up date</p>
-              <input type="time" onChange={(e) => {
-                setdropTime(e.target.value)
-              }} />
-              <input type="date" onChange={(e) => {
-                setdropDate(e.target.value)
-              }} className='ms-3' />
-            </div>
-            <Link to="/bookbike">
-              <button onClick={saveFormData} >find bike</button>
-            </Link>
+                     <p >drop  up date</p>
+                     <input type="time" onChange={(e)=>{
+                        setdropTime(e.target.value)
+                     }} />
+                     <input type="date"  onChange={(e)=>{
+                        setdropDate(e.target.value)
+                     }} className='ms-3'/>
+                  </div>
+                  <Link to="/bookbike">
+                  <button onClick={saveFormData} >find bike</button>
+                 </Link>
 
             <input
               type="time"
