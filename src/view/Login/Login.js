@@ -54,27 +54,6 @@ const Login = () => {
         
               <h1 className='text-center'> Login</h1>
 
-
-              {/* <div>
-                    <button type="button" className='btn-facebook'>
-                      <img src={Facebook} className='google-logo' />
-                      With Facebook
-                    </button>
-                  </div> 
-
-                  <div> 
-                  
-                    <button type="button" className='btn-google'>
-                      <img src={Google} className='google-logo' />
-                      With google
-                    </button>
-                  </div> */}
-
-
-
-
-
-
               <label className='fs-4'>Name</label>
               <input
 
@@ -113,22 +92,8 @@ const Login = () => {
                   setPassword(e.target.value);
                   // setError(''); 
                 }}
-              />
+              />              
               
-              
-                
-
-
-              
-
-                 
-                  
-                 
-                  
-
-
-              
-
               <div className='d-flex justify-content-between'>
                 <div>
                 <input type='checkbox' className=' fs-4' /> <span className='fs-3'>I'm not a robort</span>
@@ -141,6 +106,7 @@ const Login = () => {
               <div>
                 <button className="btn btn-login text-light p-2 fs-5" type="button" onClick={addLogin} >Login</button>
               </div>
+               {/* <Link to="/register"><p className='fs-4 text-decoration-none  text-center mt-3 text-light'>Register</p></Link> */}
 
               {/* <Link to="">
                 <button type='button' onClick={addLogin} className='btn-login'>

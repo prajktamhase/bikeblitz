@@ -117,36 +117,36 @@ const Home = () => {
                 </div>
               </div>
 
-              <p >Book At</p><br />
+              <p className="mt-4 ms-4 me-3">Book At</p><br />
               <select onChange={(e) => {
                 setBook(e.target.value)
 
               }}>
-                <option className="px-5">Daily</option>
-                <option className="px-5">Weekly</option>
-                <option className="px-5">Monthly</option>
+                <option >Daily</option>
+                <option >Weekly</option>
+                <option >Monthly</option>
               </select>
 
 
 
-              <p>pick up date</p>
+              <p className="mt-4 ms-4">pick up date : </p>
               <input type="time" onChange={(e) => {
                 setpickupTime(e.target.value)
-              }} />
+              }} className='ms-3 px-1'/>
               <input type="date" onChange={(e) => {
                 setpickupDate(e.target.value)
-              }} className='ms-3' />
+              }}  className='ms-3 px-2'/>
 
-              <p >drop  up date</p>
+              <p className="mt-4 ms-4">drop  up date :</p>
               <input type="time" onChange={(e) => {
                 setdropTime(e.target.value)
-              }} />
+              }}  className='ms-3 px-1'/>
               <input type="date" onChange={(e) => {
                 setdropDate(e.target.value)
-              }} className='ms-3' />
+              }} className='ms-3 px-1' />
             </div>
             <Link to="/bookbike">
-              <button onClick={saveFormData} >find bike</button>
+              <button onClick={saveFormData} className="ms-5 px-4">find bike :</button>
             </Link>
 
             <input
@@ -154,7 +154,7 @@ const Home = () => {
               onChange={(e) => {
                 setdropTime(e.target.value);
               }}
-              className="select-bar"
+              className="select-bar ms-3"
             />
 
             <input
