@@ -104,7 +104,7 @@ const Login = () => {
              
               </div>
               <div>
-                <button className="btn btn-login text-light p-2 fs-5" type="button" onClick={addLogin} >Login</button>
+                <button className="btn btn-login text-light p-2 fs-5 mt-5" type="button" onClick={addLogin} >Login</button>
               </div>
                {/* <Link to="/register"><p className='fs-4 text-decoration-none  text-center mt-3 text-light'>Register</p></Link> */}
 
